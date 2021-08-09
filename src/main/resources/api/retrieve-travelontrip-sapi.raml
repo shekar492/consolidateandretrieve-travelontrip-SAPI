@@ -1,0 +1,62 @@
+#%RAML 1.0
+title: retrieve-travelontrip-SAPI
+uses:
+  common: libraries/commonbusinesslibrary.raml
+types:
+  getRoutesresponse: !include /libraries/routes/datatypes/getroutes200responsedataType.raml
+  getSchedulesresponse: !include libraries/schedules/datatypes/getschedules200responsedataType.raml
+  commonError: !include libraries/common/datatypes/commonErrordataType.raml
+/{transportType}:
+  /{transportCompany}:
+    /routes:
+      get:
+        is:
+          - common.transactionId
+        responses:
+          200:
+            body:
+              application/json:
+                type: getRoutesresponse
+                example: !include /libraries/routes/examples/getroutes200responseexamplefile.json
+          400:
+            body:
+              application/json:
+                type: commonError
+                example: !include /libraries/common/examples/error400messagefile.json
+          404:
+            body:
+              application/json:
+                type: commonError
+                example: !include /libraries/common/examples/error404messagefile.json
+          500:
+            body:
+              application/json:
+                type: commonError
+                example: !include /libraries/common/examples/error500messagefile.json
+    /schedules:
+      get:
+        is:
+          - common.transactionId
+          - common.departureLocation
+          - common.destinationLocation
+        responses:
+          200:
+            body:
+              application/json:
+                type: getSchedulesresponse
+                example: !include /libraries/schedules/examples/getschedules200responsefile.json
+          400:
+            body:
+              application/json:
+                type: commonError
+                example: !include /libraries/common/examples/error400messagefile.json
+          404:
+            body:
+              application/json:
+                type: commonError
+                example: !include /libraries/common/examples/error404messagefile.json
+          500:
+            body:
+              application/json:
+                type: commonError
+                example: !include /libraries/common/examples/error500messagefile.json

@@ -1,0 +1,21 @@
+#%RAML 1.0 DataType
+type: array
+items:
+  type: object
+  properties:
+    originLocation:
+      type: object
+      properties:
+        locationCode:
+          type: string
+          required: true
+          example: "ben-sg"
+    destinationLocation:
+      type: object
+      properties:
+        locationCode:
+          type: string
+          required: true
+          example: "klg-my"
+
+  

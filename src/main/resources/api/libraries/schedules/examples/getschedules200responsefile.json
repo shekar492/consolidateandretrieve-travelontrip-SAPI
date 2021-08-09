@@ -1,0 +1,38 @@
+[
+                    {                    
+                      "availableSeats": 20,
+                      "departureDateTime": "2019-04-16T14:41:41",
+                      "travelRoute": {
+                        "destinationLocation": {
+                          "locationCode": "bl-sg"
+                        },
+                        "originLocation": {
+                          "locationCode": "kl-my"
+                        }
+                      }
+                    },
+                    {                    
+                      "availableSeats": 30,
+                      "departureDateTime": "2019-04-16T14:41:41",
+                      "travelRoute": {
+                        "destinationLocation": {
+                          "locationCode": "hyd-sg"
+                        },
+                        "originLocation": {
+                          "locationCode": "bl-my"
+                        }
+                      }
+                    },
+                    {                    
+                      "availableSeats": 25,
+                      "departureDateTime": "2019-04-16T14:41:41",
+                      "travelRoute": {
+                        "destinationLocation": {
+                          "locationCode": "us-sg"
+                        },
+                        "originLocation": {
+                          "locationCode": "us-uk"
+                        }
+                      }
+                    }
+                  ]

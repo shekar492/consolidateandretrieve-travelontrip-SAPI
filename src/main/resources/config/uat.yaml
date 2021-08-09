@@ -1,0 +1,10 @@
+http:
+  listener:
+    host: "0.0.0.0"
+    port: "8083"
+  
+
+  requester:
+    host: "localhost"
+    port: "8081"
+    path: "/travelOnTripCall/{serviceType}"
